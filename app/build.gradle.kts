@@ -76,6 +76,7 @@ dependencies {
     implementation("com.google.mlkit:face-detection:16.1.6")
     implementation("com.google.mlkit:camera:16.0.0-beta3")
 
+    implementation("com.google.accompanist:accompanist-permissions:0.32.0")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
