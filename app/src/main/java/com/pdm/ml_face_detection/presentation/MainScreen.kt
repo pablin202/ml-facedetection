@@ -98,14 +98,14 @@ fun MainScreenContent(
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.Absolute.Right
             ) {
-//                IconButton(onClick = { onRotateCamera() }) {
-//                    Icon(
-//                        modifier = Modifier.size(48.dp),
-//                        painter = painterResource(id = R.drawable.baseline_cameraswitch_24),
-//                        contentDescription = "",
-//                        tint = Color.White
-//                    )
-//                }
+                IconButton(onClick = { onRotateCamera() }) {
+                    Icon(
+                        modifier = Modifier.size(48.dp),
+                        painter = painterResource(id = R.drawable.baseline_cameraswitch_24),
+                        contentDescription = "",
+                        tint = Color.White
+                    )
+                }
             }
         }
     }
