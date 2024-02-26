@@ -1,6 +1,7 @@
 package com.pdm.ml_face_detection.presentation
 
 import android.Manifest
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -81,33 +82,46 @@ fun MainScreenContent(
         CameraPreview(Modifier.fillMaxSize(), state.camera) {
             onResult(it)
         }
-        Column(
-            modifier = Modifier.fillMaxSize(),
-            horizontalAlignment = Alignment.CenterHorizontally
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(horizontal = 40.dp),
+            contentAlignment = Alignment.Center
         ) {
-            Text(
-                text = if (state.faceResult.faceVisible) "" else "NO FACE",
-                color = Color.White,
-                style = MaterialTheme.typography.headlineLarge,
-                modifier = Modifier.weight(8f)
+            Image(
+                modifier = Modifier.fillMaxSize(),
+                painter = painterResource(id = R.drawable.ellipse_face),
+                contentDescription = null
             )
-            Row(
-                modifier = Modifier
-                    .weight(1f)
-                    .padding(16.dp),
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.Absolute.Right
-            ) {
-                IconButton(onClick = { onRotateCamera() }) {
-                    Icon(
-                        modifier = Modifier.size(48.dp),
-                        painter = painterResource(id = R.drawable.baseline_cameraswitch_24),
-                        contentDescription = "",
-                        tint = Color.White
-                    )
-                }
-            }
         }
+
+//        Column(
+//            modifier = Modifier.fillMaxSize(),
+//            horizontalAlignment = Alignment.CenterHorizontally
+//        ) {
+//            Text(
+//                text = if (state.faceResult.faceVisible) "" else "NO FACE",
+//                color = Color.White,
+//                style = MaterialTheme.typography.headlineLarge,
+//                modifier = Modifier.weight(8f)
+//            )
+//            Row(
+//                modifier = Modifier
+//                    .weight(1f)
+//                    .padding(16.dp),
+//                verticalAlignment = Alignment.CenterVertically,
+//                horizontalArrangement = Arrangement.Absolute.Right
+//            ) {
+//                IconButton(onClick = { onRotateCamera() }) {
+//                    Icon(
+//                        modifier = Modifier.size(48.dp),
+//                        painter = painterResource(id = R.drawable.baseline_cameraswitch_24),
+//                        contentDescription = "",
+//                        tint = Color.White
+//                    )
+//                }
+//            }
+//        }
     }
 }
 
