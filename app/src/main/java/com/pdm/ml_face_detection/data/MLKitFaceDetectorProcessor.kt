@@ -11,8 +11,8 @@ import com.google.mlkit.vision.face.FaceDetection
 import com.google.mlkit.vision.face.FaceDetector
 import com.google.mlkit.vision.face.FaceDetectorOptions
 import com.pdm.ml_face_detection.domain.FaceDetectorProcessor
-import com.pdm.ml_face_detection.domain.FaceResult
-import com.pdm.ml_face_detection.domain.HeadPosition
+import com.pdm.ml_face_detection.domain.models.FaceResult
+import com.pdm.ml_face_detection.domain.models.HeadPosition
 
 class MLKitFaceDetectorProcessor(
 ) : FaceDetectorProcessor {
@@ -46,16 +46,12 @@ class MLKitFaceDetectorProcessor(
                 ex.message?.let { Log.d("Face detection failed %s", it) }
             }
             .addOnCompleteListener {
-                // image.close()
+
             }
     }
 
     private fun detectInImage(image: InputImage): Task<List<Face>> {
         return detector.process(image)
-    }
-
-    fun stop() {
-        detector.close()
     }
 
     private fun getFaceResults(face: Face): FaceResult {

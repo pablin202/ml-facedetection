@@ -1,4 +1,4 @@
-package com.pdm.ml_face_detection.domain
+package com.pdm.ml_face_detection.domain.models
 
 data class FaceResult(
     val faceVisible: Boolean = false,

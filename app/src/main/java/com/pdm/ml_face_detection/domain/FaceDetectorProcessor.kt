@@ -1,7 +1,7 @@
 package com.pdm.ml_face_detection.domain
 
-import android.graphics.Bitmap
 import androidx.camera.core.ImageProxy
+import com.pdm.ml_face_detection.domain.models.FaceResult
 
 interface FaceDetectorProcessor {
     fun processFace(image: ImageProxy, result: (FaceResult) -> Unit)

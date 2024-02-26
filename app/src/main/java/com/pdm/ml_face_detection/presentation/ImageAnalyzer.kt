@@ -3,7 +3,7 @@ package com.pdm.ml_face_detection.presentation
 import androidx.camera.core.ImageAnalysis
 import androidx.camera.core.ImageProxy
 import com.pdm.ml_face_detection.domain.FaceDetectorProcessor
-import com.pdm.ml_face_detection.domain.FaceResult
+import com.pdm.ml_face_detection.domain.models.FaceResult
 
 class ImageAnalyzer(
     private val faceDetectorProcessor: FaceDetectorProcessor,

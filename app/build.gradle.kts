@@ -60,7 +60,6 @@ dependencies {
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material3:material3")
 
-
     val cameraxVersion = "1.3.1"
 
     implementation("androidx.camera:camera-core:$cameraxVersion")
@@ -70,7 +69,6 @@ dependencies {
 
     implementation("androidx.camera:camera-view:$cameraxVersion")
     implementation("androidx.camera:camera-extensions:$cameraxVersion")
-
 
     // ML - Kit
     implementation("com.google.mlkit:face-detection:16.1.6")
